@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,9 +14,13 @@ export class LoginComponent implements OnInit {
     right: false
   };
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
+  }
+
+  doLogin() {
+    this.router.navigate(['dashboard/cash']);
   }
 
 }

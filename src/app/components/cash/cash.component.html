@@ -1,0 +1,70 @@
+<div class="col-sm-12"><br>
+  <div class="btn-group btn-group-toggle">
+    <label class="btn-primary" ngbButtonLabel>
+      <input type="checkbox" ngbButton> Eliminar
+    </label>
+    <label class="btn-primary" ngbButtonLabel>
+      <input type="checkbox" ngbButton> Modificar
+    </label>
+    <label class="btn-primary" ngbButtonLabel>
+      <input type="checkbox" ngbButton> Escanear
+    </label>
+  </div>
+  <hr>
+  <pre>{{model | json}}</pre>
+</div>
+
+<div class="col-sm-6" id="div1">
+  <p-table [value]="productos">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Codigo</th>
+        <th>Cantidad</th>
+        <th>Descripción</th>
+        <th>P.Unitario</th>
+        <th>P. Total</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-car>
+      <tr>
+        <td>{{car.cod}}</td>
+        <td>{{car.cant}}</td>
+        <td>{{car.desc}}</td>
+        <td>{{car.unit}}</td>
+        <td>{{car.total}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+<div class="col-sm-6" id="div2">
+  <table border="1">
+    <tr>
+      <td height="100" colspan="3"><input value=" Código Producto" type="text" id="result" /></td>
+      <td height="100"><input type="button" value="c" onclick="clr()" style="height: 100px" /> </td>
+    </tr>
+    <tr>
+      <td><input type="button" value="1" onclick="dis('1')" /> </td>
+      <td><input type="button" value="2" onclick="dis('2')" /> </td>
+      <td><input type="button" value="3" onclick="dis('3')" /> </td>
+      <td><input type="button" value="/" onclick="dis('/')" /> </td>
+    </tr>
+    <tr>
+      <td><input type="button" value="4" onclick="dis('4')" /> </td>
+      <td><input type="button" value="5" onclick="dis('5')" /> </td>
+      <td><input type="button" value="6" onclick="dis('6')" /> </td>
+      <td><input type="button" value="-" onclick="dis('-')" /> </td>
+    </tr>
+    <tr>
+      <td><input type="button" value="7" onclick="dis('7')" /> </td>
+      <td><input type="button" value="8" onclick="dis('8')" /> </td>
+      <td><input type="button" value="9" onclick="dis('9')" /> </td>
+      <td><input type="button" value="+" onclick="dis('+')" /> </td>
+    </tr>
+    <tr>
+      <td><input type="button" value="." onclick="dis('.')" /> </td>
+      <td><input type="button" value="0" onclick="dis('0')" /> </td>
+      <td><input type="button" value="=" onclick="solve()" /> </td>
+      <td><input type="button" value="*" onclick="dis('+')" /> </td>
+    </tr>
+  </table>
+</div>

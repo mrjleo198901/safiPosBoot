@@ -1,0 +1,30 @@
+.title{ 
+    margin-bottom: 10px; 
+    text-align:center; 
+    width: 210px; 
+    color:green; 
+    border: solid black 2px; 
+    } 
+
+    input[type="button"] 
+    { 
+    background-color:#5D685D; 
+    color: white; 
+    border: solid black 2px; 
+    width:100% 
+    } 
+
+    input[type="text"] 
+    { 
+    background-color:white; 
+    border: solid black 2px; 
+    height: 100%;
+    width:100%,
+    } 
+
+    #div1{
+        float:left;
+    }
+    #div2{
+        float:left;
+    }
